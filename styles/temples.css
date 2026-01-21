@@ -1,172 +1,142 @@
 *{
-margin: 0px;
-padding: 0px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    position: relative;
-    font-family: "Roboto", sans-serif;
-     font-weight: 400;
+/* Typography */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #222;
+    line-height: 1.6;
 }
 
-header,footer{
-    color: white;
-    background-color: #04724D;
-  
-    width: 100%;
-}
-header{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: fixed;
-    top: 0px;
-    padding: 2rem;
-    z-index: 1000;
-}
-.hamburger{
-    width: 1.7rem;
-    height: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-    position: relative;
-    right: -1.5rem;
-}
-.hamburger span{
-    display: block;
-    width: 100%;
-    height: .25rem;
-    background-color: white;
-}
-.hamburger.active span:nth-child(1){
-    transform: rotate(45deg) translateY(0.6rem);
-}
-.hamburger.active span:nth-child(2){
-    opacity: 0;
-}
-.hamburger.active span:nth-child(3){
-    transform: rotate(-45deg) translateY(-0.6rem);
-}
-.menu{
-    height: 100vh;
-    width: 20rem;
-    background-color: #04A777;
-    position: fixed;
-    top: 5.55rem;
-    right: -20rem;
-     /* z-index: 1000; */
-      transition: right 0.3s ease;
-      box-sizing: border-box;
-}
-.menu.active {
-  right: 0;             
+h1, h2 {
+    font-family: 'Playfair Display', serif;
 }
 
-.menu ul {
-  list-style: none;
-  padding: 0rem 1rem;
-  margin: 0;
+/* Header Styles */
+header {
+    background-color: #243447;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
 }
 
-.menu li {
-  margin: 1rem 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 2rem;
+header h2 {
+    margin-bottom: 0.5rem;
 }
 
-.menu a {
-  text-decoration: none;
-  color: white;
-  font-size: 1.2rem;
-}
-.menu li:hover{
-    border-bottom: 1px solid antiquewhite;
-   
-}
-
-
-header nav{
-    display: none;
-    
-}
-header ul{
-    display: flex;
-    gap: 2rem;
-}
-header li{
+/* Navigation Styles */
+nav ul {
     list-style: none;
-    height: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+    flex-direction: column;
 }
-header a{
+nav a {
+    display: block;
+    padding: 0.75rem;
     text-decoration: none;
-    color: white;
-    padding: .5rem;
-    
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
-header a:hover{
-    border-bottom: 2px solid antiquewhite;
-    border-radius: 5px;
-    
-}
-header span{
-    font-size: 1.5rem;
+
+/* Hover Effects */
+nav a:hover {
+    background-color: #ffffff;
+    color: #243447;
     font-weight: 700;
 }
 
-main { 
-  max-width: 800px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 6rem;
-  
+/* Main Content Styles */
+main {
+    max-width: 800px;
+    margin: 1.5rem auto;
+    padding: 0 1rem;
 }
-main section{
+
+main h1 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* Temple Gallery (Grid Layout) */
+#temple-photos {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
-    width: 50%;
-  
-}
-main h1{
-    font-weight: 700;
-    color: black;
-    text-align: center;
-    padding: 1.5rem;
-}
-img{
-    display: flex;
-    object-fit:cover;
-    width: 30%;
-    height: auto;
-    border: 1px solid rgb(0 0 0/.2);
-    padding: .1rem;
-}
-figure{
-    width: 100%;
-    margin-bottom: 2rem;
-    box-shadow: 0px 0px 30px;
-    display:flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items: center;
-}
-figcaption{
-    text-align: center;
-    padding: .5rem 0;
+    gap: 1.5rem;
 }
 
-footer p{
+figure {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
     text-align: center;
 }
-footer{
-    margin-top: 3rem;
-      padding: .5rem 1rem;
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+}
+
+figcaption {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Hamburger Button (Mobile) */
+#menu {
+    font-size: 1.8rem;
+    border: none;
+    background: none;
+    color: #ffffff;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+#menu::before {
+    content:"☰";
+}
+
+#menu.open::before {
+    content: "✖";
+}
+
+/* Mobile Navigation */
+.navigation {
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation a {
+    display: none;
+}
+
+.navigation.open a {
+    display: block;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #243447;
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.25rem 0;
 }

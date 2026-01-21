@@ -1,17 +1,29 @@
-@media screen and (min-width:580px){
-    
-    .hamburger{
-        display: none;
+@media (min-width:40rem) {
+    nav ul {
+        flex-direction: row;
+        justify-content: center;
     }
-    header nav{
-        display: flex;
+    nav a {
+        padding: 1rem 1.5rem;
     }
-    main section{
-        grid-template-columns: repeat(3, 1fr);
-        width: 100%;
+    main {
+        max-width: 960px;
+    }
 
+    #temple-photos {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
-    .menu{
-        display: none;
+
+    #menu {
+        display:flex;
+    }
+
+    .navigation {
+        flex-direction: grid;
+        justify-content: center;
+    }
+
+    .navigation a {
+        display: block;
     }
 }
