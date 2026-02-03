@@ -19,7 +19,7 @@
     }
 
     .navigation {
-        flex-direction: grid;
+        flex-direction: row;
         justify-content: center;
     }
 
