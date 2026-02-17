@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Page | South Africa</title>
+    <meta name="description" content="WDD131 - A website of a country page">
+    <meta name="auhor" content="Lebogang Masenya">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Discover South Africa</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Culture</a></li>
+                <li><a href="#">Weather</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <picture>
+            <source srcset="images/hero-large.webp" media="(min-width: 800px)">
+            <source srcset="images/hero-medium.webp" media="(min-width: 500px)">
+            <img src="images/hero-small.webp" alt="South Africa landscape">
+        </picture>
+    </section>
+
+    <main>
+        <section class="description">
+            <h2>About South Africa</h2>
+            <p>South Africa's landscape is a diverse, dramatic mix of a high, central plateau (Highveld/Bushveld) rimmed by the Great Escarpment, including the jagged Drakensberg mountains. It transitions from arid deserts in the west and Karoo to lush coastal wetlands in the east, featuring savannahs, forests, and the Cape Fold Belt. </p>
+        </section>
+        
+        <section class="weather">
+            <h2>Weather <span class="icon">⛅</span></h2>
+            <p>Temperature: <span id="temp">15°C</span></p>
+            <p>Wind Speed: <span id="wind">10 km/h</span></p>
+            <p>Wind Chill: <span id="chill"></span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>©️<span id="year"></span> | Last Modified: <span id="lastModified"></span> 💎Lebogang Masenya💎 South Africa</p>
+    </footer>
+</body>
+</html>
