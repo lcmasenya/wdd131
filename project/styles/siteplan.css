@@ -1,0 +1,15 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #F5F5DC;
+  color: #333;
+  margin: 20px;
+}
+
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #2E8B57;
+}
+
+header img {
+  max-width: 150px;
+}
